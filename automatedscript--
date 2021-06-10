@@ -1,9 +1,0 @@
-#!/bin/bash
-echo -e "#!/bin/bash\nTHE_COMMAND_WHICH_IS_ASKED_FOR" >> FILE_NAME_GIVEN_IN_THE_TASK_SPECIFICATION
-echo -e "#!/bin/bash\nTHE_COMMAND_WHICH_IS_ASKED_FOR" >> FILE_NAME_GIVEN_IN_THE_TASK_SPECIFICATION
-.
-.
-.
-chmod u+x *                                                                              
-cd ..                                                                                    
-git add --all && git commit -m "Shell_permissions_project" && git push origin
