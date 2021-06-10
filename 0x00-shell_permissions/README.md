@@ -1,3 +1,3 @@
-# SHELL PERMISIONS
+# SHELL NAVIGATIONS
 
-This contains files for the project shell permissions
+this contains all files for the shell permsissions project
