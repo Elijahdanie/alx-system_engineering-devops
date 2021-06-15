@@ -1,1 +1,2 @@
-#!/bin/bashlias 'ls=m*'
+#!/bin/bash
+lias 'ls=m*'
