@@ -1,1 +1,3 @@
 #!/bin/bashxport HOLBERTON = 'Betty' 
+#!/bin/bash
+export HOLBERTON = 'Betty' 

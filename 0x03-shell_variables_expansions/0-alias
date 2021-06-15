@@ -1,2 +1,2 @@
 #!/bin/bash
-lias 'ls=m*'
+alias 'ls=m*'
