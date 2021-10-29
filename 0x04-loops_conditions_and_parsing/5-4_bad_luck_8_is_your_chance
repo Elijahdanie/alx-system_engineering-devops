@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+var=0
+fourth=3
+eighth=7
+while [ $var -lt 10 ];
+do
+    if [ $fourth == $var ]
+    then
+        echo "bad luck"
+    elif [ $eighth == $var ]
+    then
+        echo "good luck"
+    else
+        echo "Best School"
+    fi
+    let var=var+1
+done

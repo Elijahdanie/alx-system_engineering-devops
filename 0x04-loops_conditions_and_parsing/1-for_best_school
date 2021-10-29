@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+max=10
+for i in `(seq 1 $max)`
+do
+    echo "Best School"
+done
