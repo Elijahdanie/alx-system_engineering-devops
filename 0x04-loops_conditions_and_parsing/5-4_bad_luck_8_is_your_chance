@@ -3,12 +3,12 @@
 var=0
 fourth=3
 eighth=7
-while [ $var -lt 10 ];
+while [ "$var" -lt 10 ];
 do
-    if [ $fourth == $var ]
+    if [ "$fourth" == "$var" ]
     then
         echo "bad luck"
-    elif [ $eighth == $var ]
+    elif [ "$eighth" == "$var" ]
     then
         echo "good luck"
     else

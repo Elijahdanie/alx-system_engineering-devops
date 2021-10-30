@@ -2,10 +2,10 @@
 
 var=1
 
-while [ $var -le 20 ];
+while [ "$var" -le 20 ];
 do
-    echo $var
-    case $var in
+    echo "$var"
+    case "$var" in
     4)
         echo "bad luck from China";;
     9)

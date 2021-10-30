@@ -2,9 +2,9 @@
 
 var=0
 lim=8
-while [ $var -lt 10 ];
+while [ "$var" -lt 10 ];
 do
-    if [ $var == $lim ]
+    if [ "$var" == "$lim" ]
     then
         echo "Best School"
         echo "Hi"

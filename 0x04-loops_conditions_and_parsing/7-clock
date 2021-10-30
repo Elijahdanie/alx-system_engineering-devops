@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 hr=1
-while [ $hr -le 12 ]; 
+while [ "$hr" -le 12 ]; 
 do
     echo "Hour: $hr"
     min=1
