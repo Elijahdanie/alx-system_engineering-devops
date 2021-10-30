@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# displays all processes including those
+# having no tty
+
+ps -auxf
