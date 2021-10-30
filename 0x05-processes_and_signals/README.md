@@ -1,9 +1,9 @@
-PROCESSES AND SIGNALS
+# PROCESSES AND SIGNALS
 
-# Learning Objectives
+## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-## General
+### General
 What is a PID
 What is a process
 How to find a process’ PID
