@@ -2,7 +2,7 @@
 # prints best school 10times
 
 max=10
-for i in `(seq 0 $max)`
+for i in $(seq 1 10)
 do
     echo "Best School"
 done
