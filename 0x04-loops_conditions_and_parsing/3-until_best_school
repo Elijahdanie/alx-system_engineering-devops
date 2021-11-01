@@ -4,6 +4,6 @@
 var=0
 until [ ! "$var" -lt 10 ];
 do
-    echo "Best School"
+    echo -n "Best School"
     ((var++));
 done

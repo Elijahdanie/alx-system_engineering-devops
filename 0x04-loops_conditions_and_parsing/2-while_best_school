@@ -2,8 +2,9 @@
 # Displays Best School using while loop
 
 var=0
-while [ "$var" -lt 10 ];
+while (( var <= 10 ));
 do
-   echo 'Best School'
-   ((var++));
+	echo 'Best School'
+	((var++));
 done
+
