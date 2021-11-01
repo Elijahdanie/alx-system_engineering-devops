@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Displays Best School and hi on
+# the 9th iteration
 
 var=0
 lim=8

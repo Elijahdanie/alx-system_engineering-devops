@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# displays file in current dir
+# only names after the dash symbol
 
 for i in *
 do

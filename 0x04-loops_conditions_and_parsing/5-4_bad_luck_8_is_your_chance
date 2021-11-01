@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# displays badluck on fourth iteration
+# displays goodluck on 8th iteration
 
 var=0
 fourth=3

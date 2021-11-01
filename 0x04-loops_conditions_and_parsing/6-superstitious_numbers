@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# uses switch statement to display
+# different messages on case 4, 9 and 17
 
 var=1
 

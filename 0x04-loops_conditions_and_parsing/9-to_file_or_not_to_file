@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# displays messages on conditions
+# if file exist or not
+# if file is empty or not
+# if file is a regular file or not
 
 FILE="school"
 if [ -e "$FILE" ]; then

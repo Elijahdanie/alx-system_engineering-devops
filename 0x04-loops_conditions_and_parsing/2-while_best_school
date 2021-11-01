@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Displays Best School using while loop
 
 var=0
 while [ "$var" -lt 10 ]
