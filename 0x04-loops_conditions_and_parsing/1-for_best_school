@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Display best school 10times
+# prints best school 10times
 
-for _ in {1..10}
+for i in $(seq 1 10)
 do
-    echo 'Best School'
+    echo "Best School"
 done
