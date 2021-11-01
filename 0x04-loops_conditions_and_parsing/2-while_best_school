@@ -2,7 +2,7 @@
 # Displays Best School using while loop
 
 var=0
-while [ "$var" -lt 10 ]
+while [ "$var" -lt 10 ] 
 do
    echo "Best School"
    let var=var+1
