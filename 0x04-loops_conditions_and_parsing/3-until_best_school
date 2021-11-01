@@ -2,8 +2,8 @@
 # Displays Best School using while loop
 
 var=0
-until [ ! "$var" -lt 10 ] 
+until [ ! "$var" -lt 10 ];
 do
     echo "Best School"
-    let var=var+1
+    ((var++));
 done
