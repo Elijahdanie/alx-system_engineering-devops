@@ -9,7 +9,7 @@ do
     while [ "$min" -lt 60 ]; 
     do
 	    echo "$min"
-	    let min=min+1
+	    ((min++));
     done
-    let hr=hr+1
+    ((hr++));
 done

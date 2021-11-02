@@ -6,12 +6,12 @@ var=0
 lim=8
 while [ "$var" -lt 10 ];
 do
-    if [ "$var" == "$lim" ]
+    if [ "$var" == "$lim" ];
     then
         echo "Best School"
         echo "Hi"
     else
         echo "Best School"
     fi
-    let var=var+1
+    ((var++));
 done
