@@ -2,4 +2,4 @@
 # displays all processes including those
 # having no tty
 
-ps auxf | less
+ps -auxf
