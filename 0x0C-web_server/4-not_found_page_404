@@ -3,10 +3,11 @@
 
 sudo apt-get update
 sudo apt-get install -y nginx
+
 sudo ufw allow 'Nginx HTTP'
 echo 'Hello World!' > /var/www/html/index.html
 sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://google.com permanent;' /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" > /var/www/html/error404.html
-sed -i '/server_name _;/a error_page 404 error404.html;' /etc/nginx/sites-available/default
+sed -i '/server_name _;/a error_page 404 /error404.html;' /etc/nginx/sites-available/default
 sudo service nginx reload
 sudo service nginx start
