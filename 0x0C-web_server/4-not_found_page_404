@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# this installs an nginx server and configures it for custom 404 error page
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+sudo ufw allow 'Nginx HTTP'
+sudo echo 'Hello World!' > /var/www/html/index.html
+sudo sed -i '/listen 80 default_server;/ rewrite ^/redirect_me https://google.com permanent;' /etc/nginx/sites-enabled/default
+sudo echo "Ceci n'est pas une page" > /var/www/html/error404.html
+sudo sed -i '/server_name _;/ error_page 404 /error404.html' /etc/nginx/sites-enabled/default
+sudo service nginx start

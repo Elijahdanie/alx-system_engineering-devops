@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # this installs nginx
-# and configures a redirection
+# and configures it for redirection
 
 sudo apt-get update
 sudo apt-get install -y nginx
-
 sudo ufw allow 'Nginx HTTP'
-sudo echo "Hello World" > /var/www/html/index.html
-service nginx start
+sudo echo 'Hello World!' > /var/www/html/index.html
+sudo sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https//:google.com permanent;' /etc/nginx/sites-enabled/default
+sudo service nginx start
