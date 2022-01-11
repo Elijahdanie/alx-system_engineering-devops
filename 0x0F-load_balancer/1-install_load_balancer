@@ -1,0 +1,15 @@
+#!/usr/bin/en bash
+# this installs haproxy and goes to 
+# configure it
+
+sudo apt install --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.4 -y
+sudp apt-get update
+sudo apt install haproxy=2.4.\*
+
+echo -e "\nfrontend alx-frontend\n\tbind 0.0.0.0:80\n\tdefault_backend alx\n"
+ >> /etc/haproxy/haproxy.cfg
+FIRST="server 506-web-01 34.139.231.147:80 check"
+SECOND="server 506-web-02 3.238.84.58:80 check"
+echo -e "\nbackend alx\n\tbalance roundrobin\n\t$FIRST\n\t$SECOND\n"
+>> /etc/haproxy/haproxy.cfg
