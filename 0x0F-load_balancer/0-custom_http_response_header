@@ -15,3 +15,4 @@ sed -i "/server_name _;/a error_page 404 error404.html;" /etc/nginx/sites-availa
 sed -i "server_name _;/a add_header X-Served-by $HOSTNAME;" /etc/nginx/sites-available/default
 sudo service nginx reload
 sudo service nginx start
+6
