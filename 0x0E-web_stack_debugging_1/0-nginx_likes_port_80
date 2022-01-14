@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Fixes issue of nginx not listening on port 80
 
-sed -i 's/listen 8080 default_server;/listen 80 default_server' /etc/nginx/sites-enabled/default
-sed -i 's/listen [::]:8080 default_server ipv6only=on;/listen [::]:80 default_server' /etc/nginx/sites-enabled/default
-sed -i 's/listen [::]:80 default_server ipv6only=on;/listen [::]:80 default_server'
+sed -i 's/listen 8080 default_server;/listen 80 default_server;/g' /etc/nginx/sites-enabled/default
+sed -i 's/listen \[::\]:8080 default_server ipv6only=on;/listen \[::\]:80 default_server;/g' /etc/nginx/sites-enabled/default
+sed -i 's/listen \[::\]:80 default_server ipv6only=on;/listen \[::\]:80 default_server;/g' /etc/nginx/sites-available/default
 service nginx reload
 service nginx restart
