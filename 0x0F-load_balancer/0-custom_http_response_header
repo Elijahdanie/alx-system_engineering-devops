@@ -13,5 +13,4 @@ echo "Ceci n'est pas une page" > /var/www/html/error404.html
 sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://google.com permanent;" /etc/nginx/sites-available/default
 sed -i "/server_name _;/a error_page 404 error404.html;" /etc/nginx/sites-available/default
 sed -i "server_name _;/a add_header X-Served-by $HOSTNAME;" /etc/nginx/sites-available/default
-sudo service nginx reload
 sudo service nginx restart
