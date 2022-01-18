@@ -14,4 +14,4 @@ sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://google.com pe
 sed -i "/server_name _;/a error_page 404 error404.html;" /etc/nginx/sites-available/default
 sed -i "server_name _;/a add_header X-Served-by $HOSTNAME;" /etc/nginx/sites-available/default
 sudo service nginx reload
-sudo service nginx start
+sudo service nginx restart

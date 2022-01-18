@@ -35,6 +35,7 @@ defaults
 
 frontend alx-http
         bind *:80
+        http-request set-header X-Forwarded-Proto http
         default_backend alx
 
 frontend alx-https
