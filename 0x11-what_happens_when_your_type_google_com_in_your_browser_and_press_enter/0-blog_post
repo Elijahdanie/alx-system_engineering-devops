@@ -1,0 +1,30 @@
+
+
+What happens when you type www.google.com in the browser
+Surfing the net has become relatively common and very flexible that we don't regularly stop to think about the processes running beneath, In this article I'll go through the different significant steps that a simple request goes through right from the moment you click on the return key to send the request, I'll also speak briefly about some technicalities that sorround the web ecosystem but keeping them all revolving around the primary discuss.
+
+DNS
+When you send a request for a webpage via a web address, the web browser begins a process of resolving the web address into it's IP, the IP address is a 32 bit binary number divided into four groups of 8 bit binary numbers expressed in base-10. The web address you input in the url bar is only a human readable wrapper identity to the original IP address as computer systems primarily deals with binary numbers and not human text. The system that manages this is called the Domam name system or DNS for short, it is a robust system that is made up of a DNS recursive resolver, root name servers, Top level domain servers and authoritative name servers, These servers all work in the process of resolving and retrieving the DNS record of a domain.
+The DNS records can be looked as records in a phone book and the page link address being the name and the phone number being the IP address, it's simply records of key to value pairs that finally resolves to an IP.
+
+The web browser first searches locally for DNS records via the DNS recursor or recursive resolver, as the name implies, it recursively runs to make sure all possible locations where the records might exist are queried and finally it returns the record back to the resolver which caches the record and further returns the record back to the client machine. If the DNS record is found on the local machine, the IP address is retrieved and the web request is sent but if it doesn't find any on the local machine, it sends a request to your DNS resolver which checks its own cache for a matching record and if such record is not found, it furthers the request to a root nameserver.
+RootName Server
+There are 13 root name servers and they all handle request from DNS recursors, these servers don't have the DNS records but know the right TLD server to redirect the request from the DNS recursor based on the extension of the domain name.
+TLD Servers
+These are servers that manages records that end with a suffix that matches their IP example, .com .org .co etc domain names with all these records are stored in the TLD servers, these servers also know which Authoritative name server to redirect the query to.
+Authoritative Name servers
+These servers are the authentic servers that posses the DNS record of the domain Name, there different types of DNS records, A record, AAAA records, CNAME records etc all these either resolves to an IPV6  or an IPV4 address which are both inputted in an A record or an AAAA record.
+Once the request is fully resolved and the IP is recovered, the web browser now makes an HTTP request to the server hosting the web page but before we proceed let's talk about all these communication is made possible.
+
+TCP/HTTP Protocol
+The internet we know is an interconnection of different electronic devices that communicate over numerous networks, LAN and WAN which are large area and wide area network, communications taking place adhere to set of rules which are called protocols, these protocols facilitate the smooth communication between electronic devices on the internet. Of these protocols, the TCP is one of the underlying and foundational protocols to other wrapper protocols.
+
+TCP
+Transmission control protocol is a protocol that makes sure that data packets sent over the network are recieved before other data packets in the queue are sent, data as we know wether it's a text, an image, a video etc are all transmitted over the network in bytes grouped into chunks called data packets, these data packets contain a 24byte header as it applies to tcp where the protocol Information are appended to, it is these Information that enable routers to know how to effectively route data packets to the respective destinations and how these machines should handle the data recieved.
+
+HTTP
+Hypertext transfer protocol wraps around TCP to define its own headers on how communication should be carried out between the server and the client, the HTTP protocol
+
+
+References
+https://www.cloudflare.com/learning/dns/dns-server-types/#recursive-resolver
