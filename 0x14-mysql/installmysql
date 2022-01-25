@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# copy key from this link https://dev.mysql.com/doc/refman/5.7/en/checking-gpg-signature.html
+# pass the signature key and the target version
+# documenting this here just for easy reference
+
+sudo apt-key add "$1"
+sudo sh -c 'echo "deb http://repo.mysql.com/apt/ubuntu bionic mysql-5.7" >> /etc/apt/sources.list.d/mysql.list'
+sudo apt-get update
+sudo apt install -f mysql-client="$2"* mysql-community-server="$2"* mysql-server="$2"*
