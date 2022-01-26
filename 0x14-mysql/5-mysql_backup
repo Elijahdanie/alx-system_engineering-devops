@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# this creates a tar archive of all database backup
 
-mysqldump -u root -h localhost tyrell_corp > backup.sql
+mysqldump -u root -p"$1" --all-databases > backup.sql
 tar -czf "$(date '+%d-%m-%Y').tar.gz" backup.sql
