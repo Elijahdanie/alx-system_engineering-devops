@@ -2,4 +2,4 @@
 # This runs the command whoami as the User
 # passed in as an argument
 
-sudo -u $1 whomai
+sudo -u "$1" whomai
