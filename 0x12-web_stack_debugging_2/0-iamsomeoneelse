@@ -2,4 +2,4 @@
 # This runs the command whoami as the User
 # passed in as an argument
 
-su -u "$1" whomai -s /bin/bash
+su -s /bin/bash -c whoami "$1"
