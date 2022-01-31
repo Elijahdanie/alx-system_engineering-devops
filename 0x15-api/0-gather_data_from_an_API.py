@@ -25,7 +25,7 @@ if __name__ == '__main__':
         for i in task_json:
             if i['completed']:
                 c_task += 1
-                completed_task_str += ('\t{}\n'.format(i['title']))
+                completed_task_str += ('\t {}\n'.format(i['title']))
         mid_str = ' is done with tasks'
         print('Employee {}{}({}/{}):'.format(name, mid_str, c_task, t_len))
         print(completed_task_str)
