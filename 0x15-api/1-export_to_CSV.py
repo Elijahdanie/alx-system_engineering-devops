@@ -1,4 +1,4 @@
-#!/usrbin/python3
+#!/usr/bin/python3
 
 """
 This module gets the todo of a user identified by id
