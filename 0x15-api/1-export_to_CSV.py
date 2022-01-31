@@ -5,9 +5,9 @@ This module gets the todo of a user identified by id
 gotten from the api https://jsonplaceholder.typicode.com/users
 """
 
+import csv
 import requests
 import sys
-import csv
 
 if __name__ == '__main__':
     userid = int(sys.argv[1])
