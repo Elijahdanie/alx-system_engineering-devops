@@ -20,13 +20,13 @@ if __name__ == '__main__':
     task_json = task_resp.json()
     # "USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
     with open('USER_ID.csv', 'w', newline='') as csvfile:
-        headers = ["USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"]
-        writercsv = csv.DictWriter(csvfile, fieldnames=headers)
+        h = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
+        writercsv = csv.DictWriter(csvfile, fieldnames=h)
         writercsv.writeheader()
         for i in task_json:
-            r = {'USER_ID': userid,
-                'USERNAME': name,
-                'TASK_COMPLETED_STATUS':i['completed'],
-                'TASK_TITLE':i['title']
-                }
+            r = {}
+            r['USER_ID'] = userid
+            r['USERNAME'] = name
+            r['TASK_COMPLETED_STATUS'] = i['completed']
+            r['TASK_TITLE'] = i['title']
             writercsv.writerow(r)

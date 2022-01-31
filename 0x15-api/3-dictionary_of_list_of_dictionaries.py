@@ -25,8 +25,8 @@ if __name__ == '__main__':
         for i in task_json:
             r = {
                 'username': name,
-                'task':i['title'],
-                'completed':i['completed'],
+                'task': i['title'],
+                'completed': i['completed'],
                 }
             json_data.append(r)
         all_data[userid] = json_data

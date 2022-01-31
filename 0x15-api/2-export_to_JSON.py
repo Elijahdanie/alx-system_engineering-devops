@@ -19,11 +19,11 @@ if __name__ == '__main__':
         'https://jsonplaceholder.typicode.com/todos/?userId={}'.format(userid))
     c_task = 0
     task_json = task_resp.json()
-    json_data = {userid:[]}
+    json_data = {userid: []}
     for i in task_json:
         r = {
-            'task':i['title'],
-            'completed':i['completed'],
+            'task': i['title'],
+            'completed': i['completed'],
             'username': name,
             }
         json_data[userid].append(r)
