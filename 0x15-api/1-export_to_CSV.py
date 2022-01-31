@@ -18,12 +18,13 @@ if __name__ == '__main__':
         'https://jsonplaceholder.typicode.com/todos/?userId={}'.format(userid))
     c_task = 0
     task_json = task_resp.json()
-    with open('USER_ID.csv', 'w', newline='') as csvfile:
-        writercsv = csv.writer(csvfile, quoting=csv.QUOTE_ALL, quotechar = '"')
+    with open('{}.csv'.format(userid), 'w', newline='') as csvfile:
+        writercsv = csv.writer(
+            csvfile, quoting=csv.QUOTE_ALL, quotechar = '"')
         for i in task_json:
             r = []
-            r.append(str(userid))
-            r.append(str(name))
+            r.append(userid)
+            r.append(name)
             r.append(str(i['completed']))
-            r.append(str(i['title']))
+            r.append(i['title'])
             writercsv.writerow(r)
