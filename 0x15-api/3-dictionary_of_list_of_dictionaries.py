@@ -14,7 +14,7 @@ if __name__ == '__main__':
     json_all_users = resp.json()
     all_data = {}
     for user in json_all_users:
-        name = user['name']
+        name = user['username']
         userid = user['id']
         print(userid)
         task_resp = requests.get(
