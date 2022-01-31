@@ -16,7 +16,6 @@ if __name__ == '__main__':
     for user in json_all_users:
         name = user['username']
         userid = user['id']
-        print(userid)
         task_resp = requests.get(
             'https://jsonplaceholder.typicode.com/todos'.format(userid))
         c_task = 0
