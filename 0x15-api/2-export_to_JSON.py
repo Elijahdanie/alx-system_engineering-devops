@@ -8,7 +8,6 @@ gotten from the api https://jsonplaceholder.typicode.com/users
 import json
 import requests
 import sys
-import csv
 
 if __name__ == '__main__':
     userid = int(sys.argv[1])
