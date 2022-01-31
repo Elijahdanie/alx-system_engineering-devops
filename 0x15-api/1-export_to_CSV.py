@@ -19,8 +19,8 @@ if __name__ == '__main__':
     c_task = 0
     task_json = task_resp.json()
     with open('{}.csv'.format(userid), 'w', newline='') as csvfile:
-        writercsv = csv.writer(
-            csvfile, quoting=csv.QUOTE_ALL, quotechar='"')
+        writercsv = csv.writer(csvfile, quoting=csv.QUOTE_ALL, quotechar='"',
+                                delimiter=',', lineterminator='\n')
         for i in task_json:
             r = []
             r.append(userid)
