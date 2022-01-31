@@ -20,7 +20,7 @@ if __name__ == '__main__':
     task_json = task_resp.json()
     with open('{}.csv'.format(userid), 'w', newline='') as csvfile:
         writercsv = csv.writer(
-            csvfile, quoting=csv.QUOTE_ALL, quotechar = '"')
+            csvfile, quoting=csv.QUOTE_ALL, quotechar='"')
         for i in task_json:
             r = []
             r.append(userid)
