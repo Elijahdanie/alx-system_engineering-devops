@@ -16,7 +16,6 @@ if __name__ == '__main__':
     name = resp.json()['name']
     task_resp = requests.get(
         'https://jsonplaceholder.typicode.com/todos/?userId={}'.format(userid))
-    c_task = 0
     task_json = task_resp.json()
     with open('{}.csv'.format(userid), 'w', newline='') as csvfile:
         writercsv = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
