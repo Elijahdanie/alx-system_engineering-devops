@@ -28,4 +28,4 @@ if __name__ == '__main__':
                 completed_task_str += ('\t {}\n'.format(i['title']))
         mid_str = ' is done with tasks'
         print('Employee {}{}({}/{}):'.format(name, mid_str, c_task, t_len))
-        print(completed_task_str)
+        print(completed_task_str, end='')
