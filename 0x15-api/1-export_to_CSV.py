@@ -17,7 +17,7 @@ if __name__ == '__main__':
         resp = requests.get(
             '{}users/{}'.format(api_url, userid))
         if resp.status_code == 200:
-            name = resp.json()['name']
+            name = resp.json()['username']
             task_resp = requests.get(
                 '{}todos/?userId={}'.format(api_url, userid))
             task_json = task_resp.json()

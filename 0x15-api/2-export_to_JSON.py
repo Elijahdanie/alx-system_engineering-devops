@@ -2,7 +2,7 @@
 
 """
 This module gets the todo of a user identified by id
-gotten from the api https://jsonplaceholder.typicode.com/users
+gotten from the api https://jsonplaceholder.typicode.com
 """
 
 import json
@@ -16,10 +16,9 @@ if __name__ == '__main__':
         userid = int(sys.argv[1])
         resp = requests.get(
             '{}users/{}'.format(api_url, userid))
-        name = resp.json()['name']
+        name = resp.json()['username']
         task_resp = requests.get(
             '{}todos/?userId={}'.format(api_url, userid))
-        c_task = 0
         task_json = task_resp.json()
         json_data = {userid: []}
         for i in task_json:
