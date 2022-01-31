@@ -8,16 +8,18 @@ gotten from the api https://jsonplaceholder.typicode.com/users
 import json
 import requests
 
+api_url = 'https://jsonplaceholder.typicode.com/'
+
 if __name__ == '__main__':
     resp = requests.get(
-        'https://jsonplaceholder.typicode.com/users')
+        '{}users'.format(api_url))
     json_all_users = resp.json()
     all_data = {}
     for user in json_all_users:
         name = user['username']
         userid = user['id']
         task_resp = requests.get(
-            'https://jsonplaceholder.typicode.com/todos'.format(userid))
+            '{}todos/?userId={}'.format(api_url, userid))
         c_task = 0
         task_json = task_resp.json()
         json_data = []
