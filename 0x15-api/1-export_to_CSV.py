@@ -18,9 +18,7 @@ if __name__ == '__main__':
         'https://jsonplaceholder.typicode.com/todos/?userId={}'.format(userid))
     c_task = 0
     task_json = task_resp.json()
-    # "USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
     with open('USER_ID.csv', 'w', newline='') as csvfile:
-        #h = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
         writercsv = csv.writer(csvfile)
         for i in task_json:
             r = []
