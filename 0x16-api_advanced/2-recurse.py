@@ -8,16 +8,16 @@ recursively
 """
 
 import requests
-from sqlalchemy import null
+
 
 def recurse(subreddit, after=None, count=0, hot_list=[]):
     """
     fetches hot topics
     of a subreddit
     """
-    next_page = {} if after is None else {'after' : after}
+    next_page = {} if after is None else {'after': after}
     next_page['count'] = count
-    header = {'User-Agent' : 'elijahdanie'}
+    header = {'User-Agent': 'elijahdanie'}
     link = 'http://reddit.com/r/{}/hot/.json?'.format(subreddit)
     resp = requests.get(link, params=next_page, headers=header)
     data = resp.json()
