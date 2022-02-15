@@ -11,6 +11,9 @@ import requests
 
 
 def number_of_subscribers(subreddit):
+    """
+    Gets number of subscribers of a subreddit
+    """
     link = 'http://reddit.com/r/{}/about.json'.format(subreddit)
     resp = requests.get(link)
     data = resp.json()
