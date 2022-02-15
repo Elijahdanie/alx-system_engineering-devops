@@ -6,7 +6,6 @@ and returns the title of
 the first 10 hot post
 """
 
-import sys
 import requests
 
 
