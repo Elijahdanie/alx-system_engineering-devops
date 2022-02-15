@@ -22,7 +22,7 @@ def top_ten(subreddit):
         if childparent is not None and 'children' in childparent:
             children = childparent.get('children')
             for child in children:
-                print(child['data']['title'])
+                print(child.get('data').get('title'))
                 return
         print('None')
     except BaseException:
