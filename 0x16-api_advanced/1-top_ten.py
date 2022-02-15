@@ -10,6 +10,10 @@ import requests
 
 
 def top_ten(subreddit):
+    """
+    This returns the title of the first
+    10 hot post on the subreddit
+    """
     try:
         link = 'http://reddit.com/r/{}/hot/.json?count=10'.format(subreddit)
         resp = requests.get(link)
