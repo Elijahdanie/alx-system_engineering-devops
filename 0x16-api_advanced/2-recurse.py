@@ -16,7 +16,7 @@ def recurse(subreddit, after=None, count=0, hot_list=[]):
     of a subreddit
     """
     next_page = {} if after is None else {'after': after}
-    next_page['count'] = count
+    next_page['count'] = 25 if after is None else count
     header = {'User-Agent': 'elijahdanie'}
     link = 'http://reddit.com/r/{}/hot/.json?'.format(subreddit)
     resp = requests.get(link, params=next_page, headers=header)
