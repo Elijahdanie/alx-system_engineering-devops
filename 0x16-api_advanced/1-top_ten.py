@@ -16,15 +16,15 @@ def top_ten(subreddit):
     """
     try:
         link = 'http://reddit.com/r/{}/hot/.json?count=10'.format(subreddit)
+        headers = {'User-Agent':''}
         resp = requests.get(link)
-        if resp.status_code == 200:
-            data = resp.json()
-            childparent = data.get('data')
-            if childparent is not None and 'children' in childparent:
-                children = childparent.get('children')
-                for child in children:
-                    print(child.get('data').get('title'))
-                    return
-            print('None')
+        data = resp.json()
+        childparent = data.get('data')
+        if childparent is not None and 'children' in childparent:
+            children = childparent.get('children')
+            for child in children:
+                print(child.get('data').get('title'))
+                return
+        print('None')
     except BaseException:
         print('None')
