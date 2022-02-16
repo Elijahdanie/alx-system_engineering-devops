@@ -16,8 +16,8 @@ def top_ten(subreddit):
     """
     try:
         link = 'http://reddit.com/r/{}/hot/.json?count=10'.format(subreddit)
-        headers = {'User-Agent':''}
-        resp = requests.get(link)
+        headers = {'User-Agent': 'elijahdanie'}
+        resp = requests.get(link, headers=headers)
         data = resp.json()
         childparent = data.get('data')
         if childparent is not None and 'children' in childparent:
