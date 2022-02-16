@@ -24,7 +24,6 @@ def top_ten(subreddit):
             children = childparent.get('children')
             for child in children:
                 print(child.get('data').get('title'))
-                return
         print('None')
     except BaseException:
         print('None')
