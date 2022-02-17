@@ -25,9 +25,10 @@ def recurse(subreddit, after=None, count=0, hot_list=[]):
     if childparent is not None and 'children' in childparent:
         after = childparent.get('after')
         count = childparent.get('count')
-        if after is None:
-            return hot_list
         children = childparent.get('children')
         for child in children:
             hot_list.append(child['data']['title'])
-        return recurse(subreddit, after, count, hot_list)
+        if after is None:
+            return hot_list
+        else:
+            return recurse(subreddit, after, count, hot_list)
